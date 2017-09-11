@@ -1,0 +1,32 @@
+repo init -u https://android-git.linaro.org/git/platform/manifest.git -b master
+
+# Please do NOT run below command! Internal reference only!
+#repo init -u /home/ubuntu/aosp-mirror/platform/manifest.git -b master --depth=1
+
+cd .repo
+git clone https://github.com/vchong/optee_android_manifest.git -b wip local_manifests
+cd ..
+repo sync
+wget https://dl.google.com/dl/android/aosp/arm-hikey960-NOU-7ad3cccc.tgz
+tar xzf arm-hikey960-NOU-7ad3cccc.tgz
+./extract-arm-hikey960.sh
+. ./build/envsetup.sh
+lunch hikey960-userdebug
+make TARGET_BUILD_UEFI=true TARGET_TEE_IS_OPTEE=true
+
+#build kernel and boot img
+#MUST be after building aosp since we need <out_dir>/ramdisk.img
+cd kernel/linaro/hisilicon
+../../../device/linaro/l-loader/cc
+
+make boot_fat.uefi.img
+cd ../../../device/linaro/hikey/installer/hikey960
+
+# Set switch 1 & 3 to ON, set switch 2 to OFF
+# Reset board
+# Invoke:
+
+./flash-all.sh
+
+# Set switch 3 to OFF
+# Reset board and verify boot
