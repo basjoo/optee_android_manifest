@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github-optee" fetch="https://github.com/" />
+  <remote name="github" fetch="https://github.com/" />
 
-  <project path="external/optee_test" name="OP-TEE/optee_test" revision="master" remote="github-optee" />
-  <project path="external/optee_client" name="OP-TEE/optee_client" revision="master" remote="github-optee" />
-  <project path="optee/optee_os" name="OP-TEE/optee_os" revision="master" remote="github-optee" />
-  <project path="external/optee_examples" name="linaro-swg/optee_examples" revision="master" remote="github-optee" />
+  <remove-project name="device/linaro/hikey" />
+  <project path="device/linaro/hikey" name="vchong/device-linaro-hikey" remote="github" revision="hikey960-o-master" />
+
+  <project path="device/linaro/l-loader" name="vchong/l-loader" remote="github" revision="hikey960-o-master" />
+
+   <project path="device/linaro/tools-images-hikey960" name="96boards-hikey/tools-images-hikey960" remote="github" />
+
+ <!-- Linaro Kernels -->
+  <project path="kernel/linaro/hisilicon" name="kernel/hikey-linaro" revision="android-hikey-linaro-4.9" remote="aosp" />
+
+  <project path="external/optee_test" name="OP-TEE/optee_test" revision="master" remote="github" />
+  <project path="external/optee_client" name="OP-TEE/optee_client" revision="master" remote="github" />
+  <project path="optee/optee_os" name="OP-TEE/optee_os" revision="master" remote="github" />
+  <project path="external/optee_examples" name="linaro-swg/optee_examples" revision="master" remote="github" />
 
 </manifest>
