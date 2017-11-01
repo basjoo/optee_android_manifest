@@ -7,7 +7,7 @@
   <!--
   <project path="device/linaro/hikey" name="vchong/device-linaro-hikey" remote="github" revision="hikey960-o-master" />
   -->
-  <project path="device/linaro/hikey" name="vchong/device-linaro-hikey" remote="github" revision="wip" />
+  <project path="device/linaro/hikey" name="vchong/device-linaro-hikey" remote="github" revision="wip2" />
 
   <!--
   <project path="device/linaro/l-loader" name="vchong/l-loader" remote="github" revision="hikey960-o-master" />
