@@ -14,19 +14,21 @@ tar xzf arm-hikey960-NOU-7ad3cccc.tgz
 lunch hikey960-userdebug
 make TARGET_BUILD_UEFI=true TARGET_TEE_IS_OPTEE=true
 
-#build kernel and boot img
+# Build kernel and boot img
 #MUST be after building aosp since we need <out_dir>/ramdisk.img
 cd kernel/linaro/hisilicon
 ../../../device/linaro/l-loader/cc
 
-cd ../../../
-TARGET_BOOTIMAGE_USE_FAT=true make out/target/product/hikey960/boot_fat.uefi.img
+# Ignore this part for now
+#cd ../../../
+#TARGET_BOOTIMAGE_USE_FAT=true make out/target/product/hikey960/boot_fat.uefi.img
+
+# Flash the images
 cd device/linaro/hikey/installer/hikey960
 
 # Set switch 1 & 3 to ON, set switch 2 to OFF
 # Reset board
 # Invoke:
-
 ./flash-all.sh
 
 # Set switch 3 to OFF
