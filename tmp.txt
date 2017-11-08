@@ -17,6 +17,7 @@ make TARGET_BUILD_UEFI=true TARGET_TEE_IS_OPTEE=true
 # Build kernel and boot img
 #MUST be after building aosp since we need <out_dir>/ramdisk.img
 cd kernel/linaro/hisilicon
+make ARCH=arm64 distclean
 ../../../device/linaro/l-loader/cc
 
 # Ignore this part for now
