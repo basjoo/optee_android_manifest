@@ -14,14 +14,14 @@
   -->
   <project path="device/linaro/l-loader" name="vchong/l-loader" remote="github" revision="wip" />
 
-   <project path="device/linaro/uefi-tools" name="uefi/uefi-tools" remote="linaro" />
-   <project remote="github" path="device/linaro/arm-trusted-firmware" name="ARM-software/arm-trusted-firmware" />
-   <project remote="github" path="device/linaro/edk2" name="96boards-hikey/edk2" revision="testing/hikey960_v2.5" clone-depth="1" />
-   <project remote="github" path="device/linaro/OpenPlatformPkg" name="96boards-hikey/OpenPlatformPkg" revision="testing/hikey960_v1.3.4" />
+  <project path="device/linaro/uefi-tools" name="uefi/uefi-tools" remote="linaro" />
+  <project remote="github" path="device/linaro/arm-trusted-firmware" name="ARM-software/arm-trusted-firmware" />
+  <project remote="github" path="device/linaro/edk2" name="96boards-hikey/edk2" revision="testing/hikey960_v2.5" clone-depth="1" />
+  <project remote="github" path="device/linaro/OpenPlatformPkg" name="96boards-hikey/OpenPlatformPkg" revision="testing/hikey960_v1.3.4" />
 
-   <project path="device/linaro/tools-images-hikey960" name="96boards-hikey/tools-images-hikey960" remote="github" />
+  <project path="device/linaro/tools-images-hikey960" name="96boards-hikey/tools-images-hikey960" remote="github" />
 
- <!-- Linaro Kernels -->
+  <!-- Linaro Kernels -->
   <project path="kernel/linaro/hisilicon" name="kernel/hikey-linaro" revision="android-hikey-linaro-4.9" remote="aosp" />
 
   <project path="external/optee_test" name="OP-TEE/optee_test" revision="master" remote="github" />
