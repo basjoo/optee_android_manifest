@@ -15,7 +15,7 @@ lunch hikey960-userdebug
 make TARGET_BUILD_UEFI=true TARGET_TEE_IS_OPTEE=true CFG_SECURE_DATA_PATH=n CFG_SECSTOR_TA_MGMT_PTA=y
 
 # Build kernel and boot img
-#MUST be after building aosp since we need <out_dir>/ramdisk.img
+#MUST be after building aosp since we need out/target/product/hikey960/ramdisk.img
 cd kernel/linaro/hisilicon
 make ARCH=arm64 distclean
 ../../../device/linaro/l-loader/cc
