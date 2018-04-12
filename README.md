@@ -106,6 +106,9 @@ applied successfully before applying the next one!
 ./android-patchsets/OREO-BOOTTIME-OPTIMIZATIONS-HIKEY
 ./android-patchsets/optee-master-workarounds
 ./android-patchsets/swg-mods-o
+cd device/linaro/hikey
+git fetch http://android-review.linaro.org/device/linaro/hikey refs/changes/29/18329/1 && git cherry-pick FETCH_HEAD
+git fetch http://android-review.linaro.org/device/linaro/hikey refs/changes/30/18330/4 && git cherry-pick FETCH_HEAD
 ```
 
 **WARNING: If you run `repo sync` again at any time in the future to update
@@ -158,16 +161,22 @@ setprop sys.usb.configfs 1
 
 To build AOSP:
 ```
-make TARGET_BUILD_KERNEL=true TARGET_BOOTIMAGE_USE_FAT=true \
-CFG_SECURE_DATA_PATH=y CFG_SECSTOR_TA_MGMT_PTA=y TARGET_TEE_IS_OPTEE=true \
-TARGET_BUILD_UEFI=true
+export USE_CCACHE=1
+
+make -j18 TARGET_BUILD_KERNEL=true TARGET_BOOTIMAGE_USE_FAT=true \
+CFG_SECURE_DATA_PATH=y CFG_SECSTOR_TA_MGMT_PTA=y CFG_SECURE_KEY_SERVICES=y \
+TARGET_TEE_IS_OPTEE=true TARGET_BUILD_UEFI=true
+
+make -j24 TARGET_BUILD_KERNEL=true TARGET_BOOTIMAGE_USE_FAT=true \
+CFG_SECURE_DATA_PATH=y CFG_SECSTOR_TA_MGMT_PTA=y CFG_SECURE_KEY_SERVICES=y \
+TARGET_TEE_IS_OPTEE=true TARGET_BUILD_UEFI=true
 ```
 
 For a 4GB board, use:
 ```
 make TARGET_BUILD_KERNEL=true TARGET_BOOTIMAGE_USE_FAT=true \
-CFG_SECURE_DATA_PATH=y CFG_SECSTOR_TA_MGMT_PTA=y TARGET_TEE_IS_OPTEE=true \
-TARGET_BUILD_UEFI=true TARGET_USERDATAIMAGE_4GB=true
+CFG_SECURE_DATA_PATH=y CFG_SECSTOR_TA_MGMT_PTA=y CFG_SECURE_KEY_SERVICES=y \
+TARGET_TEE_IS_OPTEE=true TARGET_BUILD_UEFI=true TARGET_USERDATAIMAGE_4GB=true
 ```
 
 **WARNING**: Do **NOT** use `sudo`!

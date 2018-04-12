@@ -5,9 +5,31 @@
  <remove-project name="OP-TEE/optee_test" />
  <remove-project name="OP-TEE/optee_client" />
  <remove-project name="OP-TEE/optee_os" />
+ <remove-project name="device/linaro/hikey"/>
+ <!--
+ <remove-project name="kernel/hikey-linaro" />
+ -->
 
+ <!--
  <project path="external/optee_test" name="OP-TEE/optee_test" revision="master" remote="github" />
  <project path="external/optee_client" name="OP-TEE/optee_client" revision="master" remote="github" />
  <project path="optee/optee_os" name="OP-TEE/optee_os" revision="master" remote="github" />
+ -->
+
+ <project path="external/optee_test" name="etienne-lms/optee_test" revision="sks-next" remote="github" />
+ <project path="external/optee_client" name="etienne-lms/optee_client" revision="sks-next" remote="github" />
+ <project path="optee/optee_os" name="etienne-lms/optee_os" revision="sks-next" remote="github" />
+
+ <!--
+ <project path="external/optee_test" name="OP-TEE/optee_test" revision="refs/tags/3.1.0-rc1" remote="github" />
+ <project path="external/optee_client" name="OP-TEE/optee_client" revision="refs/tags/3.1.0-rc1" remote="github" />
+ <project path="optee/optee_os" name="OP-TEE/optee_os" revision="refs/tags/3.1.0-rc1" remote="github" />
+ -->
+
+ <project path="device/linaro/hikey" name="vchong/device-linaro-hikey" revision="sks-next" remote="github" />
+
+ <!--
+ <project path="kernel/linaro/hisilicon" name="vchong/linux" revision="android-hikey-linaro-4.9_no-tee-shm" remote="github" />
+ -->
 
 </manifest>
