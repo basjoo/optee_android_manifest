@@ -1,3 +1,5 @@
+!! THIS BUILD IS OUTDATED! NO SUPPORT WILL BE PROVIDED! USE AT YOUR OWN RISK !!
+
 repo init -u https://android-git.linaro.org/git/platform/manifest.git -b master
 
 # Please do NOT run below command! Internal reference only!

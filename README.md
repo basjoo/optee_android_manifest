@@ -1,3 +1,5 @@
+# THIS BUILD IS OUTDATED! NO SUPPORT WILL BE PROVIDED! USE AT YOUR OWN RISK!
+
 # AOSP+OP-TEE manifest
 
 This repository contains a local manifest that can be used to build an
