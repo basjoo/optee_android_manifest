@@ -27,6 +27,7 @@
  -->
 
  <project path="device/linaro/hikey" name="vchong/device-linaro-hikey" revision="sks-next" remote="github" />
+ <project path="device/linaro/sks" name="vchong/device-linaro-sks" revision="master" remote="github" />
 
  <!--
  <project path="kernel/linaro/hisilicon" name="vchong/linux" revision="android-hikey-linaro-4.9_no-tee-shm" remote="github" />
