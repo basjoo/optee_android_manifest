@@ -16,9 +16,9 @@
  <project path="optee/optee_os" name="OP-TEE/optee_os" revision="master" remote="github" />
  -->
 
- <project path="external/optee_test" name="etienne-lms/optee_test" revision="sks-next" remote="github" />
- <project path="external/optee_client" name="etienne-lms/optee_client" revision="sks-next" remote="github" />
- <project path="optee/optee_os" name="etienne-lms/optee_os" revision="sks-next" remote="github" />
+ <project path="external/optee_test" name="etienne-lms/optee_test" revision="sks" remote="github" />
+ <project path="external/optee_client" name="etienne-lms/optee_client" revision="sks" remote="github" />
+ <project path="optee/optee_os" name="etienne-lms/optee_os" revision="sks" remote="github" />
 
  <!--
  <project path="external/optee_test" name="OP-TEE/optee_test" revision="refs/tags/3.1.0-rc1" remote="github" />
