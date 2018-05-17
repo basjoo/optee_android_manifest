@@ -98,17 +98,19 @@ repo manifest -r -o pinned-manifest-"$(date +%Y%m%d)".xml
 **NOTE:** Apply the patches below **1 by 1** and make sure each patch is
 applied successfully before applying the next one!
 
+**NOTE:** Do **NOT** apply the patches that have been commented out!
+
 ```
-./android-patchsets/hikey-o-workarounds
+#./android-patchsets/hikey-o-workarounds
 ./android-patchsets/O-RLCR-PATCHSET
-./android-patchsets/hikey-optee-o
+#./android-patchsets/hikey-optee-o
 ./android-patchsets/hikey-optee-4.9
-./android-patchsets/OREO-BOOTTIME-OPTIMIZATIONS-HIKEY
-./android-patchsets/optee-master-workarounds
-./android-patchsets/swg-mods-o
-cd device/linaro/hikey
-git fetch http://android-review.linaro.org/device/linaro/hikey refs/changes/29/18329/1 && git cherry-pick FETCH_HEAD
-git fetch http://android-review.linaro.org/device/linaro/hikey refs/changes/30/18330/4 && git cherry-pick FETCH_HEAD
+#./android-patchsets/OREO-BOOTTIME-OPTIMIZATIONS-HIKEY
+#./android-patchsets/optee-master-workarounds
+#./android-patchsets/swg-mods-o
+#cd device/linaro/hikey
+#git fetch http://android-review.linaro.org/device/linaro/hikey refs/changes/29/18329/1 && git cherry-pick FETCH_HEAD
+#git fetch http://android-review.linaro.org/device/linaro/hikey refs/changes/30/18330/4 && git cherry-pick FETCH_HEAD
 ```
 
 **WARNING: If you run `repo sync` again at any time in the future to update
