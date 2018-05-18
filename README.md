@@ -111,6 +111,8 @@ applied successfully before applying the next one!
 #cd device/linaro/hikey
 #git fetch http://android-review.linaro.org/device/linaro/hikey refs/changes/29/18329/1 && git cherry-pick FETCH_HEAD
 #git fetch http://android-review.linaro.org/device/linaro/hikey refs/changes/30/18330/4 && git cherry-pick FETCH_HEAD
+
+Apply https://android-review.googlesource.com/c/kernel/hikey-linaro/+/420079 if necessary
 ```
 
 **WARNING: If you run `repo sync` again at any time in the future to update
